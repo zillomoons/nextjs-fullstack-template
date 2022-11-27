@@ -1,3 +1,14 @@
+// build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+// ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack)
+// chore: A code change that es (eg: npm related/ adding external dependencies)xternal user won't see (eg: change to .gitignore file or .prettierrc file)
+// feat: A new feature
+// fix: A bug fix
+// docs: Documentation related changes
+// refactor: A code that neither fix bug nor adds a feature. (eg: You can use this when there is semantic changes like renaming a variable/ function name)
+// perf: A code that improves performance
+// style: A code that is related to styling
+// test: Adding new test or making changes to existing test
+
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
