@@ -18,8 +18,8 @@ const CatCard: React.FC<ICatCard> = ({ author, body, tag, time, title }) => {
             src="/time-cat.jpg"
             alt="card__image"
             className={styles.card__image}
-            width="600"
-            height="400"
+            width="400"
+            height="200"
           />
         </div>
         <div className={styles.card__body}>
