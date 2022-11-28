@@ -4,7 +4,7 @@
 
 @layer components {
   .btn-primary {
-    @apply border-0 p-2 px-6 bg-slate-100 rounded-md;
+    @apply p-2 px-6 bg-slate-100 rounded-md hover:border border-slate-400;
   }
   .link-primary {
     @apply hover:underline;
