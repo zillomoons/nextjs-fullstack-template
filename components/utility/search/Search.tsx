@@ -1,13 +1,14 @@
+import { useRouter } from 'next/router';
 import { FormEvent, useState } from 'react';
 
 export interface ISearch {}
 
 const Search: React.FC<ISearch> = () => {
-  const [searchTerm, setSearchTerm] = useState<string>();
+  const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState<string>('');
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert(searchTerm);
-    setSearchTerm('');
+    router.push(`/results?search=${searchTerm}`);
   };
   return (
     <form
@@ -18,7 +19,7 @@ const Search: React.FC<ISearch> = () => {
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="rounded-full border-2 w-5/6 sm:w-96 h-12 px-3"
+        className="rounded-full border-2 w-5/6 sm:w-128 h-12 px-3"
       />
       <div className="space-x-3">
         <button type="submit" className="btn-primary">
